@@ -9,6 +9,11 @@ window.onscroll = function() {
     }
 }
 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 const tab1=document.querySelector('.tab1')
 const tab2=document.querySelector('.tab2')
 const tab3=document.querySelector('.tab3')

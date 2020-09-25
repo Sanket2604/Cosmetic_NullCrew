@@ -7,6 +7,9 @@
     margin: 0px;
     padding: 0px;
 }
+html{
+    scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -31,6 +34,10 @@ a:hover{
 .navbar{
     background-color: rgb(100, 0, 87);
     height: 10vh;
+}
+.collapse{
+    background-color: rgb(100, 0, 87);
+    text-align: center;
 }
 .navbar-brand{
     font-family: 'Great Vibes', cursive;
@@ -63,9 +70,6 @@ a:hover{
 }
 .shop-cart:hover{
     color: rgb(255, 116, 139);
-}
-@media only screen and (max-width: 900px){
-
 }
 /* <--------------------- Nav Bar End---------------------> */ 
 .gototop.top{
@@ -245,6 +249,32 @@ body{
     font-weight: 900;
     color: black;
 }
+.fa-angle-right{
+    animation: slide_right 2s linear infinite normal forwards;
+}
+@keyframes slide_right{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
 .item-card .buy_now:hover{
     cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .filter{
+        width: 100%;
+    }    
+    .product-list{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 80vw;
+        gap: 0px 30px;
+    }
 }

@@ -3,7 +3,7 @@ const topscroll = document.querySelector('.gototop');
 const delivery = document.querySelector('.shipment');
 window.onscroll = function() {
     var top = window.scrollY;
-    if(top>=5){
+    if(top>=1){
         nav.style.marginTop="0px"
         delivery.style.height="0px"
     }
@@ -19,3 +19,12 @@ window.onscroll = function() {
         topscroll.classList.remove('top');
     }
 }
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+document.querySelector('.cross').addEventListener('click', () => {
+    nav.style.marginTop="0px";
+    delivery.style.height="0px";
+}) 
